@@ -1,11 +1,4 @@
-LISTE DE TRUCS A AJOUTER :
-
-    - Envoyer les messages d'erreur précis dans les logs
-    - Supprimer le compte sur lequel l'opération est effectué PEU IMPORTE LE NOM (donc pas seulement "admin")
-    - Regex pour mettre des restrictions sur le mot de passe
-
-
-# ***<p align="center">Scripts de setup</p>***
+# ***<p align="center">Script de setup</p>***
 
 ### <p align="center">Ces scripts Powershell vous permettront avec l'un de pouvoir faire un setup rapide de multiples applications, serveur GLPI ou compte administrateur sur un nouveau poste, ainsi que d'ajouter ou supprimer des applications pour le premier script avec l'autre. Ils disposent d'une interface graphique le rendant facilement utilisable par tout le monde. Le nom des applications et les lignes de commande pour l'installation de ces derniers sont stockées dans le dossier "array" et peuvent être modifiés manuellement si nécessaire. 
 </p> 
@@ -65,8 +58,4 @@ Cependant, il est également pour mettre à jour de manière dynamique le formul
 ### **Évènements Add_Click**
 
 Les évènements Add_Click sont essentiellement ce qui permet de donner de l'intéractivité au document.
-
-Adresse serveur GLPI : http://glpi.e-secure.fr:8086/glpi/
-
-Lien de téléchargement de Firefox : https://download.mozilla.org/?product=firefox-latest&os=win64&lang=fr
 

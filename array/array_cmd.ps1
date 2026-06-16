@@ -9,7 +9,8 @@
         Write-Log -Message "Google Chrome a été installé avec succès."
         }
     catch{
-        Write-Log -Message "Erreur : Le telechargement de Google Chrome a echoue, verifiez votre connexion Internet, l'espace sur votre disque ou l'URL."
+        $errorMessage = $_.Exception.Message
+        Write-Log -Message $errorMessage
     }
         
 }
@@ -31,7 +32,8 @@
 
     }
     catch{
-        Write-Log -Message "Erreur : Le telechargement de Java a echoue, verifiez votre connexion Internet, l'espace sur votre disque ou l'URL."
+        $errorMessage = $_.Exception.Message
+        Write-Log -Message $errorMessage
     }
 
 }
@@ -47,7 +49,8 @@
 
     }
     catch{
-        Write-Log -Message "Erreur : Le telechargement de Adobe Reader a échoue, verifiez votre connexion Internet, l'espace sur votre disque ou l'URL."
+        $errorMessage = $_.Exception.Message
+        Write-Log -Message $errorMessage
     }
 
 }
@@ -72,7 +75,8 @@
         }
         Write-Log -Message "GLPI a ete installe avec succes."
     } else {
-        Write-Log -Message "Echec du telechargement de GLPI."
+        $errorMessage = $_.Exception.Message
+        Write-Log -Message $errorMessage
     }
 
 }
@@ -84,7 +88,7 @@
 
     # Chemins
     $downloadPath = "$env:TEMP\splashtop_sos_downloaded.exe"
-    $finalPath = "$env:TEMP\SOS e-secure.exe"
+    $finalPath = "$env:TEMP\Splashtop.exe"
     $defaultDesktop = "C:\Users\Default\Desktop"
 
     Write-Log -Message "Installation de Splashtop en cours..."
@@ -101,7 +105,7 @@
         }
 
         # Renommer le fichier
-        Rename-Item -Path $downloadPath -NewName "SOS e-secure.exe"
+        Rename-Item -Path $downloadPath -NewName "Splashtop.exe"
 
         # Débloquer le fichier (équivalent clic droit > Propriétés > Débloquer)
         Unblock-File -Path $finalPath
@@ -116,7 +120,8 @@
         Write-Log -Message "Splashtop a été installe avec succes."
     }
     catch{
-        Write-Log -Message "Erreur : Le telechargement de Splashtop a échoue, vérifiez votre connexion Internet, l'espace sur votre disque ou l'URL."
+        $errorMessage = $_.Exception.Message
+        Write-Log -Message $errorMessage
     }
     
 }      
